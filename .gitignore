@@ -46,4 +46,6 @@ _archive/
 
 # misc
 .claude
+CLAUDE.md
+GEMINI.md
 /docs
