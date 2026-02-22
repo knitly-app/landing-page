@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://knitly.io/sitemap-index.xml
