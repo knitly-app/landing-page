@@ -7,8 +7,9 @@ import "../styles/global.css";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <title>Knitly — Self-Hosted Social Network for Families & Communities</title>
-    <meta name="description" content="A self-hosted, invite-only social network for families, church groups, clubs, and homeschoolers. No algorithm. No ads. Your data stays yours." />
+    <title>Knitly — Invite-Only Social Network for Families, Communities, and Homeschool Groups</title>
+    <meta name="description" content="Knitly is a self-hosted, invite-only social network for families, church groups, clubs, homeschool communities, and close groups. No ads. No algorithm. Your data stays yours." />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://knitly.io/" />
 
     <!-- Open Graph -->
@@ -24,6 +25,72 @@ import "../styles/global.css";
     <meta name="twitter:title" content="Knitly — Self-Hosted Social Network for Families & Communities" />
     <meta name="twitter:description" content="A self-hosted, invite-only social network for families, church groups, clubs, and homeschoolers. No algorithm. No ads. Your data stays yours." />
     <meta name="twitter:image" content="https://knitly.io/og-image.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Knitly",
+            "description": "Self-hosted, invite-only social network for families, churches, clubs, homeschoolers, and communities.",
+            "applicationCategory": "SocialNetworkingApplication",
+            "operatingSystem": "Cross-platform",
+            "url": "https://knitly.io/",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": 0,
+                "priceCurrency": "USD"
+              }
+            },
+            "creator": {
+              "@type": "Organization",
+              "name": "Knitly",
+              "url": "https://github.com/knitly-app/knitly"
+            },
+            "featureList": [
+              "120 member cap for small social circles",
+              "Invite-only membership controls",
+              "Chronological activity feed",
+              "Self-hosted deployments"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Knitly an invite-only social app for families and friends?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Knitly is designed as an invite-only network with a 120-member cap, so it stays small and familiar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Knitly offer a private social network for communities?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Knitly is built to be self-hosted and invite-managed, so membership, posts, and activity stay within your own server and group."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can homeschool communities use a platform like this?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Homeschool groups can use invite-based circles, group chat, and poll features to coordinate routines without public algorithms."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -35,13 +102,14 @@ import "../styles/global.css";
 
     <!-- Nav -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#F7F5F3]/80 backdrop-blur-md">
-      <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
         <span class="flex items-center gap-2 font-['Lora'] text-xl font-semibold tracking-tight text-[#E8594E]">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
           Knitly
         </span>
         <div class="flex items-center gap-6">
-          <a href="#" class="text-sm text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">Docs</a>
+          <a href="#features" class="text-sm text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">Features</a>
+          <a href="#faq" class="text-sm text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">FAQ</a>
           <a href="https://github.com/knitly-app/knitly" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm font-semibold text-[#2D2D2D] hover:text-[#E8594E] transition-colors">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             GitHub
@@ -58,8 +126,11 @@ import "../styles/global.css";
           <div class="lg:col-span-5 reveal">
             <span class="font-['Nunito_Sans'] text-xs tracking-[0.3em] uppercase text-[#E8594E] font-semibold">For families, churches, clubs & homeschoolers</span>
             <h1 class="font-['Lora'] text-[clamp(2.6rem,6vw,5rem)] leading-[1.05] mt-4 tracking-tight">
-              The social network your family <em class="text-[#E8594E]">actually</em> wants to use.
+              The best social network for close communities.
             </h1>
+            <p class="mt-6 text-base md:text-lg text-[#2D2D2D]/60 leading-relaxed max-w-md">
+              Knitly is an invite-only, self-hosted social network for families, church groups, clubs, homeschoolers, and local communities.
+            </p>
             <p class="mt-6 text-base md:text-lg text-[#2D2D2D]/60 leading-relaxed max-w-md">
               A self-hosted, invite-only space for the people who matter most. No algorithm. No noise. Just real life, shared chronologically.
             </p>
@@ -436,7 +507,7 @@ import "../styles/global.css";
 
 
     <!-- ========== FEATURES EDITORIAL GRID ========== -->
-    <section class="py-24 md:py-40 relative">
+    <section id="features" class="py-24 md:py-40 relative">
       <div class="absolute top-0 left-0 right-0 h-px bg-[#2D2D2D]/[0.06]"></div>
 
       <div class="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -489,6 +560,66 @@ import "../styles/global.css";
             <h3 class="font-['Lora'] text-xl mt-4 font-semibold">Mentions</h3>
             <p class="text-sm text-[#2D2D2D]/50 mt-2 leading-relaxed">Tag your people with <span class="text-[#E8594E] font-medium">@name</span>. Rendered in coral, impossible to miss. Every mention is a gentle tap on the shoulder.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== FREQUENTLY ASKED QUESTIONS ========== -->
+    <section id="faq" class="py-24 md:py-40 relative overflow-hidden">
+      <div class="absolute top-0 left-0 right-0 h-px bg-[#2D2D2D]/[0.06]"></div>
+
+      <div class="max-w-[900px] mx-auto px-6 md:px-12">
+        <div class="reveal">
+          <span class="font-['Nunito_Sans'] text-xs tracking-[0.3em] uppercase text-[#5B8FB9] font-semibold">Answer Bank</span>
+          <h2 class="font-['Lora'] text-4xl md:text-5xl mt-4 leading-[1.1]">Need a direct answer before you click?</h2>
+          <p class="mt-4 text-base md:text-lg text-[#2D2D2D]/60 leading-relaxed">These are the top questions prospects search before they browse the product page.</p>
+        </div>
+
+        <div class="mt-10 grid gap-4">
+          <article class="bg-white rounded-3xl border border-[#2D2D2D]/[0.08] p-6 md:p-8 reveal" style="--reveal-delay: 0s">
+            <h3 class="font-['Lora'] text-2xl text-[#E8594E]">Is Knitly a self-hosted social network for families?</h3>
+            <p class="mt-4 text-[#2D2D2D]/65 leading-relaxed">
+              Yes. Knitly is designed for intimate groups where you control hosting and membership.
+            </p>
+          </article>
+
+          <article class="bg-white rounded-3xl border border-[#2D2D2D]/[0.08] p-6 md:p-8 reveal" style="--reveal-delay: 0.08s">
+            <h3 class="font-['Lora'] text-2xl text-[#E8594E]">Is Knitly an invite-only social app for families and communities?</h3>
+            <p class="mt-4 text-[#2D2D2D]/65 leading-relaxed">
+              Yes. Membership is controlled by admins and invite tokens, with a 120-person ceiling to keep participation personal.
+            </p>
+          </article>
+
+          <article class="bg-white rounded-3xl border border-[#2D2D2D]/[0.08] p-6 md:p-8 reveal" style="--reveal-delay: 0.16s">
+            <h3 class="font-['Lora'] text-2xl text-[#E8594E]">Is Knitly a private alternative for communities?</h3>
+            <p class="mt-4 text-[#2D2D2D]/65 leading-relaxed">
+              Yes. No public algorithm feeds. No open growth funnel. Access is invitation-only and data stays on your own infrastructure.
+            </p>
+          </article>
+
+          <article class="bg-white rounded-3xl border border-[#2D2D2D]/[0.08] p-6 md:p-8 reveal" style="--reveal-delay: 0.24s">
+            <h3 class="font-['Lora'] text-2xl text-[#E8594E]">Can church groups use this?</h3>
+            <p class="mt-4 text-[#2D2D2D]/65 leading-relaxed">
+              Yes. Churches can run invite-only circles for families, ministries, and events without depending on public network algorithms.
+            </p>
+          </article>
+
+          <article class="bg-white rounded-3xl border border-[#2D2D2D]/[0.08] p-6 md:p-8 reveal" style="--reveal-delay: 0.32s">
+            <h3 class="font-['Lora'] text-2xl text-[#E8594E]">Can a homeschool community social app work for your group?</h3>
+            <p class="mt-4 text-[#2D2D2D]/65 leading-relaxed">
+              Yes. Groups can coordinate meal plans, events, photos, and chat in one space with clear membership boundaries.
+            </p>
+          </article>
+        </div>
+
+        <div class="mt-10 p-6 md:p-8 bg-[#fff] rounded-3xl border border-[#2D2D2D]/[0.08] reveal" style="--reveal-delay: 0.4s">
+          <h3 class="font-['Lora'] text-2xl">Sources</h3>
+          <p class="mt-3 text-[#2D2D2D]/65 leading-relaxed">Claims on this page are based on product documentation and established social grouping research.</p>
+          <ul class="mt-4 list-disc pl-5 text-[#2D2D2D]/65 leading-relaxed space-y-2">
+            <li><a class="underline underline-offset-4" href="https://github.com/knitly-app/knitly" target="_blank" rel="noopener">Knitly repository (source code and docs)</a></li>
+            <li><a class="underline underline-offset-4" href="https://en.wikipedia.org/wiki/Dunbar%27s_number" target="_blank" rel="noopener">Dunbar's number research summary</a></li>
+          </ul>
         </div>
       </div>
     </section>
