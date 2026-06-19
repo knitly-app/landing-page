@@ -1,0 +1,153 @@
+/* Knitly Starlight theme overrides
+ * Brand: coral-red accent on warm off-white with charcoal text
+ * Accents: sage green, dusty blue, purple, warm amber
+ */
+
+/* ── Fonts ───────────────────────────────────────────────
+   Match landing page: Lora (headings), Nunito Sans (body)  ── */
+
+@layer starlight.base {
+	:root {
+		--sl-font: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		--sl-font-heading: 'Lora', Georgia, 'Times New Roman', serif;
+	}
+}
+
+/* ── Light mode (brand theme) ──────────────────────────── */
+
+@layer starlight.base {
+	:root[data-theme='light'],
+	[data-theme='light'] ::backdrop {
+		/* Grays — warm scale */
+		--sl-color-white:    hsl(30, 20%, 16%);   /* charcoal          #2D2D2D */
+		--sl-color-gray-1:   hsl(30, 20%, 18%);   /* charcoal lighter  #323232 */
+		--sl-color-gray-2:   hsl(30, 15%, 25%);   /* dark text         #434343 */
+		--sl-color-gray-3:   hsl(30, 8%,  40%);   /* muted text        #6A6A6A */
+		--sl-color-gray-4:   hsl(30, 6%,  58%);   /* secondary text    #8C8C8C */
+		--sl-color-gray-5:   hsl(30, 5%,  80%);   /* hairline          #B8B8B8 */
+		--sl-color-gray-6:   hsl(30, 10%, 94%);   /* subtle bg         #EDEBE8 */
+		--sl-color-gray-7:   hsl(30, 12%, 97%);   /* near-white        #F5F4F2 */
+		--sl-color-black:    hsl(30, 20%, 96%);   /* warm off-white    #F7F5F3 */
+
+		/* Accent — coral red (#E8594E) */
+		--sl-hue-orange: 8;
+		--sl-color-accent-low:    hsl(8, 78%, 90%);   /* coral-tinted bg    */
+		--sl-color-accent:        hsl(8, 78%, 60%);   /* coral brand        #E8594E */
+		--sl-color-accent-high:   hsl(8, 78%, 28%);   /* dark coral text    */
+
+		--sl-color-text:          var(--sl-color-gray-2);
+		--sl-color-text-accent:   var(--sl-color-accent);
+		--sl-color-text-invert:   var(--sl-color-white);
+		--sl-color-bg:            var(--sl-color-black);
+		--sl-color-bg-nav:        hsl(30, 18%, 97%);
+		--sl-color-bg-sidebar:    var(--sl-color-black);
+		--sl-color-bg-inline-code: hsl(30, 12%, 94%);
+		--sl-color-bg-accent:     var(--sl-color-accent);
+		--sl-color-hairline-light: var(--sl-color-gray-6);
+		--sl-color-hairline:      var(--sl-color-gray-6);
+		--sl-color-hairline-shade: hsl(30, 12%, 94%);
+
+		--sl-color-backdrop-overlay: hsla(30, 10%, 30%, 0.35);
+
+		/* Semantic colors */
+		--sl-color-orange-low:  hsl(37, 100%, 90%);
+		--sl-color-orange:      hsl(37, 100%, 65%);  /* warm amber         #FFB347 */
+		--sl-color-orange-high: hsl(37, 100%, 30%);
+
+		--sl-color-green-low:   hsl(134, 31%, 88%);
+		--sl-color-green:       hsl(134, 31%, 52%);  /* sage green         #6BAF7B */
+		--sl-color-green-high:  hsl(134, 31%, 22%);
+
+		--sl-color-blue-low:    hsl(205, 37%, 88%);
+		--sl-color-blue:        hsl(205, 37%, 49%);  /* dusty blue         #5B8FB9 */
+		--sl-color-blue-high:   hsl(205, 37%, 22%);
+
+		--sl-color-purple-low:  hsl(283, 37%, 88%);
+		--sl-color-purple:      hsl(283, 37%, 53%);  /* purple             #9B59B6 */
+		--sl-color-purple-high: hsl(283, 37%, 24%);
+
+		--sl-color-red-low:     hsl(8, 78%, 90%);
+		--sl-color-red:         hsl(8, 78%, 60%);    /* coral              #E8594E */
+		--sl-color-red-high:    hsl(8, 78%, 28%);
+	}
+}
+
+/* ── Dark mode (warm charcoal) ───────────────────────────
+   For users with OS dark mode preference                  ── */
+
+@layer starlight.base {
+	:root,
+	::backdrop {
+		/* Grays — warm dark scale */
+		--sl-color-white:    hsl(30, 12%, 96%);   /* warm white        #F7F5F3 */
+		--sl-color-gray-1:   hsl(30, 10%, 78%);   /* light text        #C8C5C0 */
+		--sl-color-gray-2:   hsl(30, 7%,  60%);   /* body text         #9A9690 */
+		--sl-color-gray-3:   hsl(30, 5%,  42%);   /* muted text        #6D6B67 */
+		--sl-color-gray-4:   hsl(30, 4%,  30%);   /* surface           #4D4B47 */
+		--sl-color-gray-5:   hsl(30, 3%,  22%);   /* darker surface    #383735 */
+		--sl-color-gray-6:   hsl(30, 3%,  16%);   /* bg surface        #292826 */
+		--sl-color-black:    hsl(30, 4%,  13%);   /* deep bg           #232220 */
+
+		/* Accent — coral red (same brand hue) */
+		--sl-hue-orange: 8;
+		--sl-color-accent-low:    hsl(8, 50%, 22%);   /* dark coral bg    */
+		--sl-color-accent:        hsl(8, 75%, 60%);   /* coral brand      #E8594E */
+		--sl-color-accent-high:   hsl(8, 75%, 85%);   /* light coral text */
+
+		--sl-color-text:          var(--sl-color-gray-1);
+		--sl-color-text-accent:   var(--sl-color-accent-high);
+		--sl-color-text-invert:   var(--sl-color-black);
+		--sl-color-bg:            var(--sl-color-black);
+		--sl-color-bg-nav:        var(--sl-color-gray-6);
+		--sl-color-bg-sidebar:    var(--sl-color-gray-6);
+		--sl-color-bg-inline-code: var(--sl-color-gray-5);
+		--sl-color-bg-accent:     var(--sl-color-accent-high);
+		--sl-color-hairline-light: var(--sl-color-gray-5);
+		--sl-color-hairline:      var(--sl-color-gray-6);
+		--sl-color-hairline-shade: var(--sl-color-black);
+
+		--sl-color-backdrop-overlay: hsla(30, 5%, 8%, 0.7);
+
+		/* Semantic colors — adjusted for dark bg */
+		--sl-color-orange-low:  hsl(37, 60%, 22%);
+		--sl-color-orange:      hsl(37, 85%, 63%);
+		--sl-color-orange-high: hsl(37, 85%, 85%);
+
+		--sl-color-green-low:   hsl(134, 25%, 22%);
+		--sl-color-green:       hsl(134, 28%, 54%);
+		--sl-color-green-high:  hsl(134, 35%, 82%);
+
+		--sl-color-blue-low:    hsl(205, 30%, 20%);
+		--sl-color-blue:        hsl(205, 35%, 55%);
+		--sl-color-blue-high:   hsl(205, 40%, 85%);
+
+		--sl-color-purple-low:  hsl(283, 28%, 22%);
+		--sl-color-purple:      hsl(283, 35%, 55%);
+		--sl-color-purple-high: hsl(283, 38%, 85%);
+
+		--sl-color-red-low:     hsl(8, 50%, 22%);
+		--sl-color-red:         hsl(8, 75%, 60%);
+		--sl-color-red-high:    hsl(8, 75%, 85%);
+	}
+}
+
+/* ── Brand polish ──────────────────────────────────────── */
+
+@layer starlight.components {
+	/* Soften code backgrounds to match warm palette */
+	[data-theme='light'] .starlight-clipboard,
+	[data-theme='light'] pre {
+		background-color: hsl(30, 8%, 94%);
+	}
+
+	/* Subtle warm border on aside/admonition blocks */
+	[data-theme='light'] .starlight-aside {
+		border-color: hsl(8, 78%, 60%);
+	}
+
+	/* Nav link hover uses brand coral */
+	[data-theme='light'] .sidebar li a:hover,
+	[data-theme='light'] .sidebar li a:focus {
+		color: hsl(8, 78%, 55%);
+	}
+}
