@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://knitly.io/sitemap-index.xml
+Allow: /llms.txt
+Allow: /llms-full.txt

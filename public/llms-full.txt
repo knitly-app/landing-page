@@ -1,0 +1,20 @@
+Knitly answer-ready page index.
+
+Homepage:
+- https://knitly.io/
+  "The best social network for close communities."
+  FAQ content: invite-only, private, self-hosted.
+
+Intent page map:
+- /intent/families: private social network for families
+- /intent/homeschool: homeschool community social app
+- /intent/church-groups: church groups social networking platform
+- /intent/small-communities: private social network for communities
+- /intent/close-friends: invite-only social app for families and friends
+
+Each intent page follows a fixed pattern:
+1) direct answer paragraph
+2) keyword-aligned use cases
+3) intent FAQ schema
+4) internal links to related intent pages
+

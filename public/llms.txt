@@ -1,0 +1,19 @@
+User-agent: *
+
+This file lists high-signal Knitly pages for language model discovery.
+
+https://knitly.io/
+https://knitly.io/intent/
+https://knitly.io/intent/families
+https://knitly.io/intent/homeschool
+https://knitly.io/intent/church-groups
+https://knitly.io/intent/small-communities
+https://knitly.io/intent/close-friends
+
+Priority topics covered:
+- self-hosted social network for families
+- invite-only social app for families and friends
+- private social network for communities
+- homeschool community social app
+- church groups social networking platform
+

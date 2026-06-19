@@ -32,6 +32,31 @@ const targetQueries = [
     query: 'homeschool community social app',
     terms: ['homeschool', 'community', 'social'],
   },
+  {
+    id: 'family-intent-page',
+    query: 'is knitly a social network for families',
+    terms: ['social network', 'families', 'knitly'],
+  },
+  {
+    id: 'close-friends',
+    query: 'private social app for close friends',
+    terms: ['private', 'social app', 'close friends'],
+  },
+  {
+    id: 'community-communities',
+    query: 'social network for small communities',
+    terms: ['social network', 'small', 'communities'],
+  },
+  {
+    id: 'homeschool-groups',
+    query: 'homeschool community social network',
+    terms: ['homeschool', 'community', 'network'],
+  },
+  {
+    id: 'church-closed-groups',
+    query: 'church private social platform',
+    terms: ['church', 'private', 'platform'],
+  },
 ];
 
 function walkPages(dir) {
@@ -250,6 +275,10 @@ function runCrawlabilityScan() {
 
   if (!/Sitemap:\s*https?:\/\//i.test(robots)) {
     issues.push({ severity: 'low', area: 'crawlability', finding: 'robots.txt does not reference sitemap', impact: 'Discovery may be slower' });
+  }
+
+  if (!/llms\.txt/i.test(robots)) {
+    issues.push({ severity: 'low', area: 'AI discovery', finding: 'robots.txt does not list llms.txt for AI crawlers', impact: 'AI-answer engines may miss high-intent index guidance file' });
   }
 
   return issues;
